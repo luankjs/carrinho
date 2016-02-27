@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :supermarket do
-    name "MyString"
+    name "MySupermarket"
   end
 
 end
