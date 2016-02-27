@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :supermarket_zipcode do
-    supermarket nil
-		zipcode nil
+    supermarket
+		zipcode
   end
 
 end
