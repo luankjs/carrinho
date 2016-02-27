@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160227032603) do
+ActiveRecord::Schema.define(version: 20160227035751) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,8 +21,12 @@ ActiveRecord::Schema.define(version: 20160227032603) do
     t.float    "price"
     t.text     "description"
     t.integer  "supermarket_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "products", ["supermarket_id"], name: "index_products_on_supermarket_id", using: :btree
