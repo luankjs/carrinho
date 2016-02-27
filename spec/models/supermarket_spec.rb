@@ -17,6 +17,8 @@ RSpec.describe Supermarket, type: :model do
 			@zipcode = FactoryGirl.build(:zipcode)
 			@supermarket.zipcodes << @zipcode
 			@supermarket.save
+
+			@product = FactoryGirl.create(:product, supermarket: @supermarket)
 		end
 
 		it "assings supermarket_zipcode was created" do
@@ -29,6 +31,19 @@ RSpec.describe Supermarket, type: :model do
 
 	  it "returns correct zipcodess from supermarket" do
 	  	expect(@supermarket.zipcodes).to eq([@zipcode])
+	  end
+
+	  it "assings product on supermarket product's list" do
+	  	expect(@supermarket.products).to eq([@product])
+	  end
+
+	  it "assings dependent destroy from product" do
+	  	expect { @supermarket.destroy }.to change{ Product.count }.by(-1)
+	  end
+
+	  it "assings dependent destroy from supermarket_zipcode" do
+	  	expect { @supermarket.destroy }.to change{ SupermarketZipcode.count }.by(-1)
+	  	expect { @supermarket.destroy }.to change{ Zipcode.count }.by(0)
 	  end
 	end
 end
