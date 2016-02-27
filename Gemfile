@@ -10,6 +10,7 @@ gem 'jbuilder', 												'~> 2.0'
 # Application
 gem 'pg'
 gem 'simple_form'
+gem 'paperclip',												'~> 4.3'
 
 # Assets
 gem 'jquery-rails'
