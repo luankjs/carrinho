@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  belongs_to :supermarket, dependent: :destroy
+  belongs_to :supermarket
 
   validates :name, presence: true
   validates :description, presence: true

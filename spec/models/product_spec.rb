@@ -31,4 +31,15 @@ RSpec.describe Product, type: :model do
   		expect(FactoryGirl.build(:product, supermarket: nil)).to be_invalid
   	end
   end
+
+  describe Product, "Association" do
+  	before do
+  		@supermarket = FactoryGirl.create(:supermarket)
+  		@product = FactoryGirl.create(:product, supermarket: @supermarket)
+  	end
+
+  	it "assigns return correct supermarket" do
+  		expect(@product.supermarket).to eq(@supermarket)
+  	end
+  end
 end
