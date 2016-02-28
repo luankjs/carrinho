@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'main/index'
+  root 'main#index'
 
   resources :supermarkets, only: [] do
     scope module: 'supermarkets' do
