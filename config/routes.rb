@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  namespace :supermarkets do
-  get 'products/index'
+  resources :supermarkets, only: [] do
+    scope module: 'supermarkets' do
+      get 'products', to: 'products#index'
+    end
   end
 
   post 'supermarkets', to: 'supermarket#index', as: :supermarkets_zipcode
