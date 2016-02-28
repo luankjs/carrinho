@@ -5,4 +5,15 @@ body {
 .jumbotron {
 	background: url('../bg-home.jpg') center center;
 	padding: 85px 0 !important;
+
+	h1, p {
+		color: #fff !important;
+	}
+
+	form {
+		#zipcode {
+	    border-radius: 6px;
+	    width: 250px;
+		}
+	}
 }
