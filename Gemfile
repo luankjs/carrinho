@@ -14,6 +14,7 @@ gem 'paperclip',												'~> 4.3'
 
 # Assets
 gem 'jquery-rails'
+gem 'jquery-inputmask-rails'
 gem 'turbolinks'
 
 gem 'sdoc', 														'~> 0.4.0', group: :doc

@@ -13,6 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.inputmask
+//= require jquery.inputmask.extensions
+//= require jquery.inputmask.numeric.extensions
+//= require jquery.inputmask.date.extensions
+//= require application/custom.js
 //
 //= require_tree ../../../vendor/assets/javascripts/application/.
 //= require_tree .
