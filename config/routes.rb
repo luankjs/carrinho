@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :supermarkets do
+  get 'products/index'
+  end
+
   post 'supermarkets', to: 'supermarket#index', as: :supermarkets_zipcode
 
   # The priority is based upon order of creation: first created -> highest priority.
