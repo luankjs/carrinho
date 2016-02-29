@@ -14,3 +14,25 @@
     </p>
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="page-header col-xs-12">
+      <h1><%= t(:supermarket).pluralize %></h1>
+    </div>
+    <% if @supermarkets.each do |supermarket| %>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center">
+        <%= image_tag supermarket.logo.url(:thumb), class: "img-circle" %>
+        <h3 class="supermarket-name">
+          <%= link_to supermarket_products_path(supermarket) do %>
+            <%= supermarket.name %>
+          <% end -%>
+        </h3>
+      </div>
+    <% end.empty? %>
+      <div class="col-xs-12">
+        <h3><%= t(:no_supermarkets_founded) %></h3>
+      </div>
+    <% end -%>
+  </div>
+</div>
